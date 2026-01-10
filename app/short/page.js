@@ -1,28 +1,27 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Shortener() {
   const [url, setUrl] = useState("");
   const [links, setLinks] = useState([]);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("links");
-    if (saved) setLinks(JSON.parse(saved));
-  }, []);
-
-  function shorten() {
+  async function shorten() {
     if (!url) return;
 
-    const code = Math.random().toString(36).substring(2, 8);
+    const res = await fetch("https://gyani-shortener-api.onrender.com/shorten", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ url })
+    });
+
+    const data = await res.json();
 
     const newLink = {
-      code,
+      code: data.code,
       url
     };
 
-    const updated = [newLink, ...links];
-    setLinks(updated);
-    localStorage.setItem("links", JSON.stringify(updated));
+    setLinks([newLink, ...links]);
     setUrl("");
   }
 
