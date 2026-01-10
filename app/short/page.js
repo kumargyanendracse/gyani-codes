@@ -36,12 +36,23 @@ export default function Shortener() {
         style={input}
       />
 
-      <button onClick={shorten} style={btn}>Shorten</button>
+      <button onClick={shorten} style={btn}>
+        Shorten
+      </button>
 
       <div style={{ marginTop: "30px" }}>
         {links.map((l, i) => (
           <div key={i} style={card}>
-            <p><b>Short:</b> {window.location.origin}/s/{l.code}</p>
+            <p>
+              <b>Short:</b>{" "}
+              <a
+                href={`/s/${l.code}`}
+                target="_blank"
+                style={{ color: "#38bdf8" }}
+              >
+                {window.location.origin}/s/{l.code}
+              </a>
+            </p>
             <p><b>Original:</b> {l.url}</p>
           </div>
         ))}
