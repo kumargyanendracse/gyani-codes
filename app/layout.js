@@ -18,12 +18,13 @@ export default function RootLayout({ children }) {
             gyani<span style={{ color: "#38bdf8" }}>.codes</span>
           </div>
 
-          <div style={{ display: "flex", gap: "25px" }}>
-            <a href="/" style={linkStyle}>Home</a>
-            <a href="/projects" style={linkStyle}>Projects</a>
-            <a href="/blog" style={linkStyle}>Blog</a>
-            <a href="/tools" style={linkStyle}>Tools</a>
-          </div>
+         <div style={{ display: "flex", gap: "25px" }}>
+  <a href="/" style={linkStyle}>Home</a>
+  <a href="/projects" style={linkStyle}>Projects</a>
+  <a href="/blog" style={linkStyle}>Blog</a>
+  <a href="/tools" style={linkStyle}>Tools</a>
+  <a href="/tracker" style={linkStyle}>Tracker</a>
+</div>
         </nav>
 
         {children}
