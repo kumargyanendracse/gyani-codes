@@ -12,18 +12,38 @@ export default function Tools() {
     setLoading(true);
     setResult("");
 
-    const prompt = `
+const prompt = `
 You are an interview coach.
 Generate interview questions for:
+
 Experience: ${experience}
 Role: ${role}
 Company: ${company}
 
-Give:
-- 5 Go questions
-- 5 DSA questions
-- 5 System Design questions
+Return the response strictly in this format:
+
+GO:
+1.
+2.
+3.
+4.
+5.
+
+DSA:
+1.
+2.
+3.
+4.
+5.
+
+SYSTEM_DESIGN:
+1.
+2.
+3.
+4.
+5.
 `;
+
 
     const res = await fetch("/api/ai", {
       method: "POST",
