@@ -6,15 +6,26 @@ export default function Shortener() {
   const [links, setLinks] = useState([]);
 
   async function shorten() {
-    if (!url) return;
+  console.log("BUTTON CLICKED");
 
+  if (!url) {
+    console.log("URL EMPTY");
+    return;
+  }
+
+  console.log("Sending request to backend...");
+
+  try {
     const res = await fetch("https://gyani-shortener-api.onrender.com/shorten", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url })
     });
 
+    console.log("Response received:", res.status);
+
     const data = await res.json();
+    console.log("Response data:", data);
 
     const newLink = {
       code: data.code,
@@ -23,7 +34,11 @@ export default function Shortener() {
 
     setLinks([newLink, ...links]);
     setUrl("");
+  } catch (err) {
+    console.error("Fetch error:", err);
   }
+}
+
 
   return (
     <main style={{ padding: "40px", maxWidth: "800px", margin: "auto" }}>
