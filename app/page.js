@@ -53,6 +53,43 @@ export default function Home() {
         <h2 style={{ marginTop: "60px", fontSize: "2rem" }}>🚀 Projects</h2>
 
         <div style={{ marginTop: "20px", display: "grid", gap: "20px" }}>
+              <div style={cardStyle}>
+  <h3>URL Shortener</h3>
+  <p>
+    A Bit.ly–style URL shortener where users can create short links that redirect
+    to long URLs. Built with Next.js and client-side storage, designed to later
+    move to a Go backend.
+  </p>
+  <div style={{ marginTop: "10px", display: "flex", gap: "10px" }}>
+    <a
+      href="/short"
+      style={{
+        padding: "8px 14px",
+        background: "#38bdf8",
+        color: "#0f172a",
+        borderRadius: "6px",
+        textDecoration: "none",
+        fontWeight: "bold"
+      }}
+    >
+      Live Demo
+    </a>
+    <a
+      href="https://github.com/kumargyanendracse/gyani-codes"
+      target="_blank"
+      style={{
+        padding: "8px 14px",
+        border: "1px solid #38bdf8",
+        borderRadius: "6px",
+        color: "#38bdf8",
+        textDecoration: "none"
+      }}
+    >
+      Source Code
+    </a>
+  </div>
+</div>
+
           <div style={cardStyle}>
             <h3>Gyani11 – Fantasy Sports App</h3>
             <p>A Dream11-like platform built using Go backend with contests, teams, and scoring logic.</p>
