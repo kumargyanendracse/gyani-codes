@@ -50,7 +50,7 @@ export default function Shortener() {
                 target="_blank"
                 style={{ color: "#38bdf8" }}
               >
-                {window.location.origin}/s/{l.code}
+                /s/{l.code}
               </a>
             </p>
             <p><b>Original:</b> {l.url}</p>
@@ -73,7 +73,8 @@ const btn = {
   background: "#38bdf8",
   border: "none",
   borderRadius: "8px",
-  fontWeight: "bold"
+  fontWeight: "bold",
+  cursor: "pointer"
 };
 
 const card = {
