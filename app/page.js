@@ -17,7 +17,7 @@ export default function Home() {
       </ul>
 
       <h3>📬 Contact</h3>
-      <p>Email: gyanendrakumar.dev@gmail.com</p>
+      <p>Email: gyanendrakumarcse@gmail.com</p>
       <p>GitHub: github.com/kumargyanendracse</p>
     </main>
   );
