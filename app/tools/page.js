@@ -59,6 +59,21 @@ SYSTEM_DESIGN:
   return (
     <main style={{ padding: "60px", maxWidth: "800px", margin: "auto" }}>
       <h1>🧠 AI Interview Question Generator</h1>
+<a
+  href="/map"
+  style={{
+    display: "inline-block",
+    marginBottom: "20px",
+    padding: "12px 20px",
+    background: "#10b981",
+    color: "white",
+    borderRadius: "8px",
+    textDecoration: "none",
+    fontWeight: "bold"
+  }}
+>
+  🌍 Open World Map
+</a>
 
       <input
         placeholder="Experience (e.g. 2 years)"
